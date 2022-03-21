@@ -17,4 +17,6 @@ public interface StudentService {
     public List<Student> getAll();
     public void delete(  @NonNull final int id);
 
+    public List<Student> findByFirstName(@NonNull String firstName);
+
     }

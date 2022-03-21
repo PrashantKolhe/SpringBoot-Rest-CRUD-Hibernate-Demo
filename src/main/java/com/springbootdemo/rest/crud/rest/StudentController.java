@@ -16,6 +16,10 @@ public class StudentController {
     @Autowired
     StudentService studentService;
 
+    @GetMapping("/{firstName}")
+    public List<Student> getAllByFirstName(@PathVariable("firstName") String firstName){
+        return studentService.findByFirstName(firstName);
+    }
 
     @GetMapping("/")
     public List<Student> getAll(){

@@ -10,8 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class StudentResponse {
-    String first_name;
-    String last_name;
+    String firstName;
+    String lastName;
     String email;
 
 }

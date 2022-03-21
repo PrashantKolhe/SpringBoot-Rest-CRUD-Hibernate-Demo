@@ -40,10 +40,10 @@ public class StudentServiceImpl implements StudentService {
 
         Student student = studentRepository.getById(id);
 
-        if (StringUtils.isNotBlank(studentRequest.getFirst_name()))
-            student.setFirst_name(studentRequest.getFirst_name());
-        if (StringUtils.isNotBlank(studentRequest.getLast_name()))
-            student.setLast_name(studentRequest.getLast_name());
+        if (StringUtils.isNotBlank(studentRequest.getFirstName()))
+            student.setFirstName(studentRequest.getFirstName());
+        if (StringUtils.isNotBlank(studentRequest.getLastName()))
+            student.setLastName(studentRequest.getLastName());
         if (StringUtils.isNotBlank(studentRequest.getEmail()))
             student.setEmail(studentRequest.getEmail());
 
@@ -63,5 +63,10 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void delete(@NonNull final int id) {
         studentRepository.deleteById(id);
+    }
+
+    @Override
+    public List<Student> findByFirstName(String firstName) {
+        return studentRepository.findByFirstName(firstName);
     }
 }

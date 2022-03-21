@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class StudentRequest {
-    String first_name;
-    String last_name;
+    String firstName;
+    String lastName;
     String email;
 
 }
